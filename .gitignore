@@ -1,0 +1,13 @@
+
+*.dll
+*.exe
+*.log
+*.tmp
+*.swp
+wordpress/
+mysql/
+nginx/certs/
+vendor/
+.env
+docker-compose.override.yml
+.DS_Store
