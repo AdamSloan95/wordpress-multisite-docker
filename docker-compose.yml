@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.nginx
+    depends_on:
+      - database
+      - php
     ports:
       - 80:80
       - 443:443
@@ -29,5 +32,15 @@ services:
       dockerfile: Dockerfile.php
     volumes:
       - ./wordpress:/var/www/html:delegated
+
+#WPCLI
+
+  wp:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    volumes:
+      - ./wordpress:/var/www/html:delegated
+    entrypoint: ["wp", "--allow-root"]
   
       
