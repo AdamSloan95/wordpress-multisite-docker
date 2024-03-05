@@ -6,7 +6,7 @@
 *.swp
 wordpress/
 mysql/
-nginx/certs/
+certs/
 vendor/
 .env
 docker-compose.override.yml

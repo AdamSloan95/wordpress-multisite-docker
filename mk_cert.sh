@@ -8,10 +8,10 @@ fi
 if [ -d "certs" ]; then
     echo "Certificates directory already exists."
 else
-    # Create certs directory if not exists
+# Create certs directory if not exists
     mkdir -p certs
 fi
 
 # Generate SSL certificates using mkcert
 mkcert -install
-mkcert -cert-file ./certs/localhost.test.pem -key-file ./certs/localhost.test-key.pem localhost.test
+mkcert -cert-file ./certs/localhost.test.pem -key-file ./certs/localhost.test-key.pem localhost.test site1.localhost.test site2.localhost.test site3.localhost.test
