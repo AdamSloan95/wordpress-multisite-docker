@@ -1,4 +1,6 @@
 FROM nginx:stable-alpine
 
+#Add configuration file from local:destination
 ADD ./nginx/default.conf /etc/nginx/conf.d/default.conf
-ADD ./nginx/certs /etc/nginx/certs/self-signed
+#Add SSL Certificates from local:destination
+ADD ./certs /etc/nginx/certs/self-signed

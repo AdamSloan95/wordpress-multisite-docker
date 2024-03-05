@@ -3,6 +3,7 @@ version: '3.9'
 #NGINX
 services:
   nginx:
+    #builds the image from Dockerfile.nginx file in current directory
     build:
       context: .
       dockerfile: Dockerfile.nginx
@@ -10,8 +11,8 @@ services:
       - database
       - php
     ports:
-      - 80:80
-      - 443:443
+      - 80:80 #http
+      - 443:443 #https
     volumes:
       - ./wordpress:/var/www/html:delegated
 #DATABASE
@@ -20,6 +21,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
+      # Environment variables store sensitive data
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -28,6 +30,7 @@ services:
 #PHP
   php:
     build:
+      #builds the image from Dockerfile.php file in current directory
       context: .
       dockerfile: Dockerfile.php
     volumes:
@@ -37,6 +40,7 @@ services:
 
   wp:
     build:
+    # Reuses Dockerfile.php
       context: .
       dockerfile: Dockerfile.php
     volumes:
