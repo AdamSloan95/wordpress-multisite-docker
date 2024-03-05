@@ -2,7 +2,7 @@
 
 I am in the process of migrating a companies webite and wanted a development environment that I could spin up with an ssl as some plugins etc do not work without this. I have used docker before for a university project and this seemed like the perfect tool for the job. I found this [video](https://www.youtube.com/watch?v=kIqWxjDj4IU) incredibly useful. 
 
-## Steps to recreate a wordpress environment
+### Steps to recreate a wordpress environment
 
 ## Setup
 
