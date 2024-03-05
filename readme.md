@@ -19,3 +19,5 @@ I used mkcert and I found it to work quite well out of the box (Openssl availabl
 I am going to be looking here when configuring subdomains for nginx:
 [Extra config for nginx](https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/)
 
+I will likely update some of the image versions as well as the vid came out in 2021
+
